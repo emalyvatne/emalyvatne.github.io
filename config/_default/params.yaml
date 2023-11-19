@@ -8,6 +8,7 @@
 appearance:
   theme_day: minimal
   theme_night: minimal
+  theme_default: dark
   font: minimal
   font_size: L
 
