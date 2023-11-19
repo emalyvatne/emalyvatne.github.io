@@ -70,13 +70,21 @@ sections:
           date_start: '2022-08-01'
           date_end: ''
           description: ''
-        - title: Data Analytics Intern
-          company: Orlando Soccer Cub
+        - title: X-Force Fellow in Data Science and Engineering Research
+          company: National Security Innovation Network and Army National Guard
           company_url: ''
           company_logo: ''
           location: Remote
           date_start: '2023-06-01'
-          date_end: '2023-08-01'
+          date_end: '2023-08-08'
+          description: ''
+        - title: Data Analytics Intern
+          company: Orlando Soccer Club
+          company_url: ''
+          company_logo: ''
+          location: Remote
+          date_start: '2023-01-01'
+          date_end: '2023-06-01'
           description: ''
         - title: Undergraduate Research Intern
           company: The Ohio State University MOvES Lab

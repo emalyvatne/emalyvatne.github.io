@@ -32,8 +32,11 @@ interests:
   - Applied sport science
   - Athlete monitoring
   - Recovery science
-  - Data analysis, visualization, science, and engineering
+  - Data analysis and visualization
   - Wearable devices
+  - Internal load
+  - Data science
+  - Data engineering
 
 # Education to show in About widget
 education:
