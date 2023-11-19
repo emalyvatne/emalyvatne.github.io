@@ -6,9 +6,9 @@
 # Appearance
 
 appearance:
-  theme_day: earth
-  # theme_night: earth
-  # theme_default: light
+  theme_day: minimal
+  theme_night: minimal
+  theme_default: light
   font: minimal
   font_size: L
 
