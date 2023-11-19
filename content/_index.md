@@ -129,7 +129,7 @@ sections:
           date_end: ''
           date_start: '2023-09-01'
           description: ''
-          icon: ''
+          # icon: ''
           organization: Microsoft
           organization_url: 'https://learn.microsoft.com/'
           title: 'Microsoft Certified: Azure Data Fundamentals'
@@ -138,7 +138,7 @@ sections:
           date_end: ''
           date_start: '2023-05-31'
           description: ''
-          icon: ''
+          # icon: ''
           organization: Coursera
           organization_url: https://www.coursera.org
           title: 'Data Science: Foundations using R Specialization'
@@ -147,7 +147,7 @@ sections:
           date_end: ''
           date_start: '2022-05-31'
           description: ''
-          icon: ''
+          # icon: ''
           organization: National Strength and Conditioning Association
           organization_url: 'https://www.nsca.com/'
           title: 'Certified Strength and Conditioning Specialist'
@@ -234,7 +234,7 @@ sections:
       title: Publications
       text: |-
         {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
+        [Click here to view all and filter publications](./publication/).
         {{% /callout %}}
       filters:
         folders:
