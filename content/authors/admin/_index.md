@@ -22,7 +22,7 @@ role: Graduate Research Associate with the Human Performance Collaborative and A
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: The Ohio State University
-    url: https://www.hpc.osu.edu/
+    url: https://hpc.osu.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include applied sport science, recovery interventions, and data analysis, visualization, science, and engineering. 

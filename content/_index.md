@@ -64,7 +64,7 @@ sections:
       items:
         - title: Graduate Research Associate and Assistant Sport Scientist
           company: The Ohio State University Human Performance and Department of Athletics
-          company_url: 'hpc.osu.edu'
+          company_url: 'https://hpc.osu.edu'
           company_logo: ''
           location: Columbus, OH
           date_start: '2022-08-01'
