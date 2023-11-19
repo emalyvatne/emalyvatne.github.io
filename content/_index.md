@@ -119,7 +119,7 @@ sections:
       items:
         - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
           date_end: '2023-05-15'
-          date_start: '2013-01-01'
+          date_start: '2023-01-01'
           description: ''
           icon: coursera
           organization: Coursera
@@ -127,8 +127,8 @@ sections:
           title: 'Data Science: Foundations using R Specialization'
           url: ''
         - certificate_url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/'
-          date_end: ''
-          date_start: '2021-01-01'
+          date_end: '2023-09-01'
+          date_start: '2023-08-01'
           description: ''
           icon: ''
           organization: Microsoft
@@ -219,7 +219,7 @@ sections:
       filters:
         folders:
           - publication
-        exclude_featured: true
+        exclude_featured: false
     design:
       columns: '2'
       view: citation
