@@ -125,24 +125,33 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
-          date_end: '2023-05-15'
-          date_start: '2023-01-01'
-          description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: 'Data Science: Foundations using R Specialization'
-          url: ''
         - certificate_url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/'
           date_end: '2023-09-01'
-          date_start: '2023-08-01'
+          date_start: ''
           description: ''
           icon: ''
           organization: Microsoft
           organization_url: 'https://learn.microsoft.com/'
           title: 'Microsoft Certified: Azure Data Fundamentals'
-          url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/'
+          url: ''
+        - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
+          date_end: '2023-05-15'
+          date_start: ''
+          description: ''
+          icon: ''
+          organization: Coursera
+          organization_url: https://www.coursera.org
+          title: 'Data Science: Foundations using R Specialization'
+          url: ''
+        - certificate_url: 'https://www.nsca.com/certification/cscs/'
+          date_end: '2022-05-31'
+          date_start: ''
+          description: ''
+          icon: ''
+          organization: National Strength and Conditioning Association
+          organization_url: 'https://www.nsca.com/'
+          title: 'Certified Strength and Conditioning Specialist'
+          url: ''
     design:
       columns: '2'
   - block: collection
