@@ -127,7 +127,7 @@ sections:
       items:
         - certificate_url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/'
           date_end: ''
-          date_start: '09-01-2023'
+          date_start: '2023-09-01'
           description: ''
           icon: ''
           organization: Microsoft
@@ -136,7 +136,7 @@ sections:
           url: ''
         - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
           date_end: ''
-          date_start: '05-01-2023'
+          date_start: '2023-05-31'
           description: ''
           icon: ''
           organization: Coursera
@@ -145,7 +145,7 @@ sections:
           url: ''
         - certificate_url: 'https://www.nsca.com/certification/cscs/'
           date_end: ''
-          date_start: '05-31-2023'
+          date_start: '2022-05-31'
           description: ''
           icon: ''
           organization: National Strength and Conditioning Association
