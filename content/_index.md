@@ -134,15 +134,15 @@ sections:
           organization_url: 'https://learn.microsoft.com/'
           title: 'Microsoft Certified: Azure Data Fundamentals'
           url: ''
-        - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
-          date_end: ''
-          date_start: '2023-05-31'
-          description: ''
-          # icon: ''
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: 'Data Science: Foundations using R Specialization'
-          url: ''
+        # - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
+        #   date_end: ''
+        #   date_start: '2023-05-31'
+        #   description: ''
+        #   # icon: ''
+        #   organization: Coursera
+        #   organization_url: https://www.coursera.org
+        #   title: 'Data Science: Foundations using R Specialization'
+        #   url: ''
         - certificate_url: 'https://www.nsca.com/certification/cscs/'
           date_end: ''
           date_start: '2022-05-31'
@@ -271,7 +271,7 @@ sections:
       title: Contact
       subtitle:
       text: |-
-        Feel free to chat about sports or sport science or anything really!! I'd love to connect!!!
+        Feel free to reach out to chat about sports or sport science or anything really!! I'd love to connect!!!
       # Contact (add or remove contact options as necessary)
       email: vatne.1@buckeyemail.osu.edu
       address:
