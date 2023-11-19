@@ -5,7 +5,6 @@ event: National Strength and Conditioning Coaches Association National Conferenc
 event_url: "https://www.nsca.com/events/national-conferences/"
 
 location: Las Vegas, NV
-address:""
 
 summary: "A podium presentation on the effects of a single, daytime floatation-restricted environmental stimulation therapy session on sleep and nocturnal, cardiac-autonomic markers of recovery in elite collegiate athletes."
 abstract: "Collegiate athletes experience a variety of stressors related to their athletic and academic
