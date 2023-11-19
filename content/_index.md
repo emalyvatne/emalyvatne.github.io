@@ -215,10 +215,14 @@ sections:
     count: 5
     content:
       title: Publications
-      text: ''
+      text: |-
+        {{% callout note %}}
+        Quickly discover relevant content by [filtering publications](./publication/).
+        {{% /callout %}}
       filters:
         folders:
           - publication
+        featured_only: false
         exclude_featured: false
     design:
       columns: '2'
