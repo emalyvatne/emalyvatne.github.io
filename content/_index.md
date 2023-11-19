@@ -62,27 +62,46 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
-          company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+        - title: Graduate Research Associate and Assistant Sport Scientist
+          company: The Ohio State University Human Performance and Department of Athletics
+          company_url: 'hpc.osu.edu'
+          company_logo: ''
+          location: Columbus, OH
+          date_start: '2022-08-01'
           date_end: ''
-          description: |2-
-              Responsibilities include:
-
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
+          description: ''
+        - title: Data Analytics Intern
+          company: Orlando Soccer Cub
           company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          company_logo: ''
+          location: Remote
+          date_start: '2023-06-01'
+          date_end: '2023-08-01'
+          description: ''
+        - title: Undergraduate Research Intern
+          company: The Ohio State University MOvES Lab
+          company_url: ''
+          company_logo: ''
+          location: Remote
+          date_start: '2021-01-31'
+          date_end: '2022-12-01'
+          description: ''
+        - title: Fellow and Data Science Intern
+          company: Women in Sports Tech and Perch
+          company_url: ''
+          company_logo: ''
+          location: Remote
+          date_start: '2022-06-01'
+          date_end: '2022-08-01'
+          description: ''
+        - title: Undergraduate Strength and Conditioning Intern
+          company: The Ohio State University Department of Athletics
+          company_url: ''
+          company_logo: ''
+          location: Remote
+          date_start: '2021-06-01'
+          date_end: '2021-08-01'
+          description: ''
     design:
       columns: '2'
   - block: accomplishments
