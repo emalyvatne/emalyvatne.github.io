@@ -212,7 +212,7 @@ sections:
   #     view: card
   - block: collection
     id: publications
-    count: 5
+    count: 0
     content:
       title: Publications
       text: |-
@@ -222,8 +222,13 @@ sections:
       filters:
         folders:
           - publication
-        featured_only: false
+        author: ""
+        category: ""
+        tag: ""
         exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: "article-journal"
     design:
       columns: '2'
       view: citation
