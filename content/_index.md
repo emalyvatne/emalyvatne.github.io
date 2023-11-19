@@ -134,6 +134,10 @@ sections:
           organization_url: 'https://learn.microsoft.com/'
           title: 'Microsoft Certified: Azure Data Fundamentals'
           url: ''
+        - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
+          date_start: '2023-05-31'
+          organtization: Coursera
+          title: 'Data Science: Foundations using R Specialization'
         # - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
         #   date_end: ''
         #   date_start: '2023-05-31'
