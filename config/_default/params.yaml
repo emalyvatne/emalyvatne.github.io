@@ -7,7 +7,7 @@
 
 appearance:
   theme_day: earth
-  theme_night: earth
+  # theme_night: earth
   # theme_default: light
   font: minimal
   font_size: L
