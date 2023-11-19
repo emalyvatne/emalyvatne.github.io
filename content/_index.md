@@ -82,7 +82,7 @@ sections:
           company: The Ohio State University MOvES Lab
           company_url: ''
           company_logo: ''
-          location: Remote
+          location: Columbus, OH
           date_start: '2021-01-31'
           date_end: '2022-12-01'
           description: ''

@@ -1,12 +1,17 @@
 ---
-title: "An example preprint / working paper"
+title: "Effects of Daytime Floatation-REST on Nocturnal Cardiovascular Physiology, Sleep, and Subjective Recovery in Collegiate Student-Athletes: A Comprehensive Observational Study"
 authors:
 - admin
-date: "2019-04-07T00:00:00Z"
+- Justin Merrigan
+- Jason Stone
+- Catherine Saenz
+- William Kraemer
+- Joshua Hagen
+date: "2023-12-31T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2024-01-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -17,20 +22,18 @@ publication_types: ["article"]
 publication: ""
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: The primary aim of this study was to investigate the relationship between floatation-restricted environmental stimulation therapy (floatation-REST) and nocturnal cardiovascular physiology and sleep in collegiate athletes. The secondary aim was to describe the perceived changes in soreness, mood, fatigue, and energy level after floatation-REST and the overall floatation-REST experience in collegiate athletes. Data included 183 records of nocturnal cardiovascular physiology and sleep collected using a wearable device from 89 athletes (49.43% women) on 12 different varsity sports, and 2319 survey responses collected immediately after the floatation-REST session from 907 athletes (49.17% women) across 24 varsity sports. Resting heart rate (RHR) (p < 0.001, effect size (ES) = -0.367) but not heart rate variability (HRV) or sleep metrics were significantly different in female athletes and both RHR (p = 0.017, ES = -0.227)  and HRV (p = 0.032, ES = 0.189) but not sleep metrics were significantly different in male athletes after the floatation-REST session compared to the seven-day rolling average before the session. 98.6% of the survey responses reported an overall good floatation-REST experience and 85.3% reported feeling better after the session. Athletes also reported reduced soreness, stress, fatigue, and improved energy level. These findings demonstrate the relationship between floatation-REST and nocturnal cardiovascular physiology and subjective recovery in collegiate athletes. Periods of autonomic imbalance and fatigue may be an ideal time for practitioners to recommend floatation-REST to athletes and strategic designs of athlete monitoring paradigms may allow for insights into the effects of recovery modalities on athletes in applied settings.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: ''
 
 tags:
 - Source Themes
 featured: false
 
-links:
-- name: Custom Link
-  url: http://example.org
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+links: ''
+url_pdf: ''
+url_code: ''
 url_dataset: '#'
 url_poster: '#'
 url_project: ''
@@ -41,7 +44,7 @@ url_video: '#'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: ""
   focal_point: ""
   preview_only: false
 
@@ -50,19 +53,12 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-- internal-project
+projects: []
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: ""
 ---
-
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
