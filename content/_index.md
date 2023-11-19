@@ -212,6 +212,7 @@ sections:
   #     view: card
   - block: collection
     id: publications
+    count: 5
     content:
       title: Publications
       text: ''
@@ -224,6 +225,7 @@ sections:
       view: citation
   - block: collection
     id: talks
+    count: 5
     content:
       title: Presentations
       filters:
