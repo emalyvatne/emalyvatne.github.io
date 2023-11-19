@@ -126,7 +126,7 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
         - certificate_url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/'
-          date_end: '2023-09-01'
+          date_end: ''
           date_start: ''
           description: ''
           icon: ''
@@ -135,7 +135,7 @@ sections:
           title: 'Microsoft Certified: Azure Data Fundamentals'
           url: ''
         - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
-          date_end: '2023-05-15'
+          date_end: ''
           date_start: ''
           description: ''
           icon: ''
@@ -144,7 +144,7 @@ sections:
           title: 'Data Science: Foundations using R Specialization'
           url: ''
         - certificate_url: 'https://www.nsca.com/certification/cscs/'
-          date_end: '2022-05-31'
+          date_end: ''
           date_start: ''
           description: ''
           icon: ''
