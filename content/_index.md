@@ -136,7 +136,7 @@ sections:
           url: ''
         - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
           date_start: '2023-05-31'
-          organtization: Coursera
+          organization: 'Coursera'
           title: 'Data Science: Foundations using R Specialization'
         # - certificate_url: 'https://www.coursera.org/specializations/data-science-foundations-r'
         #   date_end: ''
