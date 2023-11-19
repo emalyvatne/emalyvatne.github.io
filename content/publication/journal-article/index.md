@@ -1,12 +1,12 @@
 ---
-title: "An example journal article"
+title: "Analysis of Sleep, Nocturnal Physiology, and Physical Demands of NCAA Women's Ice Hockey Across a Championship Season"
 authors:
 - Justin Merrigan
 - Jason Stone
 - William Kraemer
 - Christopher Friend
 - Kevin Lennon
-- Emaly Vatne
+- admin
 - Joshua Hagen
 author_notes: ""
 date: "2023-08-31T00:00:00Z"
@@ -67,5 +67,5 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: ""
 ---
