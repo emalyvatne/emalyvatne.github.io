@@ -6,10 +6,10 @@
 # Appearance
 
 appearance:
-  theme_day: minimal
-  theme_night: minimal
-  theme_default: light
-  font: minimal
+  theme_day: my_theme
+  theme_night: my_theme
+  theme_default: my_theme
+  font: my_theme
   font_size: L
 
 # SEO
