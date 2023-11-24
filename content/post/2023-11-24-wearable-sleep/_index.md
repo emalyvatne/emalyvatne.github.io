@@ -1,3 +1,16 @@
+---
+title: Comparison of Sleep Monitoring Data using EEG and Commercial Wearable Devices
+author: 'Emaly Vatne'
+date: '2023-11-22'
+slug: COTS-wearable-sleep-vs-EEG
+categories: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2023-11-22T20:57:45-05:00'
+projects: []
+---
+
 ### Routine Sleep Monitoring in Athletes
 
 The value of sleep for optimal health and performance is well described (O’Donnell et al., 2018; Walsh et al., 2021; Watson, 2017). A recent systematic review and meta-analysis of 77 studies with a total of 959 participants found that acute sleep loss had a significant negative impact on anaerobic power, speed/power endurance,
