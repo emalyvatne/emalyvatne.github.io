@@ -165,7 +165,7 @@ sections:
       subtitle: ''
       text: |-
         {{% callout note %}}
-        [Click here to view all and filter posts!!](./post/).
+        [Click here to view all and filter posts](./post/).
         {{% /callout %}}
       # Choose how many pages you would like to display (0 = all pages)
       count: 5

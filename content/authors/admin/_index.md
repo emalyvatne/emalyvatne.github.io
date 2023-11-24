@@ -103,4 +103,4 @@ social:
 highlight_name: true
 ---
 
-Hi!! My name is Emaly Vatne and I am a first-year PhD student in kinesiology and statistical data analysis at Ohio State. I also work for the Human Performance Collaborative and Department of Athletics in sport science. Before all of this, I played 5 seasons on the varsity women's soccer team at Ohio State. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!
+Hi!! My name is Emaly Vatne and I am a first-year PhD student in kinesiology and statistical data analysis at Ohio State. I also work for the Human Performance Collaborative and Department of Athletics in sport science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!
