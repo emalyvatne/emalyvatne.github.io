@@ -1,0 +1,132 @@
+---
+title: Comparison of COTS Wearable Devices to EEG for Routine Sleep Monioring
+author: 'Emaly Vatne'
+date: '2023-11-24'
+output: md_document
+slug: wearables-for-routine-sleep
+categories: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-11-24T20:57:45-05:00'
+featured: yes
+image:
+  placement: 1
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+### Routine Sleep Monitoring in Athletes  
+
+The value of sleep for optimal health and performance is well described (REF). A recent systematic review and meta-analysis of 77 studies with a total of 959 participants found that acute sleep loss had a significant negative impact on anaerobic power, speed/power endurance, high-intensity interval exercise, strength, strength-endurance, and skill performance (Craven et al., 2022). However, athletes, especially collegiate student-athletes, commonly cite poor and inadequate sleep quantity and quality (Mah et al., 2018; Merfeld et al., 2022). Practitioners in applied sport environments have attempted to monitor sleep and sleep behaviors to target education interventions and understand sleep among their athletes. Wearable devices are now commonly deployed for the measurement of routine sleep in athletes as a result of technological advancements (Driller et al., 2023). Commercial-off-the-shelf (COTS) wearable devices offer a mode of measuring sleep that addresses potential under- or overestimation of sleep that resulted from self-reporting (Carter et al., 2020) and also can be less onerous on athletes than asking them to do something like complete a sleep survey every day. Despite this, COTS wearable devices may also present inaccuracies or poor reliability. It is important that practitioners are aware of the limitations of the wearable devices that are deployed in their environment. Polysomnography (PSG) is the gold-standard in scientific research for measuring sleep, but this method is invasive and not practical in applied environments. Recent investigations have described how COTS wearable devices compare to PSG (Chinoy et al., 2022; Lee et al., 2018; Stone et al., 2021; Svensson et al., 2019). While these are the studies that I reference and would recommend referencing for choosing devices and key performance indicators from the devices, I wanted to do a personal comparison of my wearable devices to electroencephalography (EEG) using my own sleep data (please don't judge my sleep). EEG has been identified as an alternative to PSG for the measurement of sleep (Arnal et al., 2020). 
+
+Therefore, this post is a comparison of two common COTS wearable devices to EEG using my own sleep data!! Again, this is not meant to be referenced for choosing devices - I would recommend reading the following articles instead:  
+
+1. Chinoy, E. D., Cuellar, J. A., Jameson, J. T., & Markwald, R. R. (2022). Performance of Four Commercial Wearable Sleep-Tracking Devices Tested Under Unrestricted Conditions at Home in Healthy Young Adults. Nature and Science of Sleep, 14, 493–516. https://doi.org/10.2147/NSS.S348795  
+  
+2. Lee, J.-M., Byun, W., Keill, A., Dinkel, D., & Seo, Y. (2018). Comparison of Wearable Trackers’ Ability to Estimate Sleep. International Journal of Environmental Research and Public Health, 15(6), Article 6. https://doi.org/10.3390/ijerph15061265  
+  
+  
+3. Stone, J. D., Ulman, H. K., Tran, K., Thompson, A. G., Halter, M. D., Ramadan, J. H., Stephenson, M., Finomore, V. S., Galster, S. M., Rezai, A. R., & Hagen, J. A. (2021). Assessing the Accuracy of Popular Commercial Technologies That Measure Resting Heart Rate and Heart Rate Variability. Frontiers in Sports and Active Living, 3, 585870. https://doi.org/10.3389/fspor.2021.585870  
+  
+  
+4. Svensson, T., Chung, U., Tokuno, S., Nakamura, M., & Svensson, A. K. (2019). A validation study of a consumer wearable sleep tracker compared to a portable EEG system in naturalistic conditions. Journal of Psychosomatic Research, 126, 109822. https://doi.org/10.1016/j.jpsychores.2019.109822  
+  
+    
+5. Miller, D. J., Sargent, C., & Roach, G. D. (2022). A Validation of Six Wearable Devices for Estimating Sleep, Heart Rate and Heart Rate Variability in Healthy Adults. Sensors (Basel, Switzerland), 22(16), 6317. https://doi.org/10.3390/s22166317
+
+
+This article is more about the statistical analysis approaches for comparing a device's data to values from a gold-standard. And kind of just for fun for me :)
+
+### The Data
+
+I have a CSV file that contains 30 nights of sleep data collected from Dreem 2 EEG, Oura Ring Generation 3, and Whoop. For the purpose of this post, the Dreem 2 EEG device is serving as the gold-standard. For each device, I am looking at the number of hours and minutes of total, deep, REM, and light sleep as well as the time spent awake. I put each device on within at least 30 minutes of going to sleep and started a sleep session for the Dreem 2 and Whoop device. For the Oura Ring, the sleep session was cropped to match the start and stop times of the Dreem 2 sleep session on the subsequent morning. These methods replicate methods that have been previously described (REF).
+
+Here is my code for loading and looking at the structure of the data:
+
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include=TRUE}
+library(tidyverse)
+sleep_df <- read.csv("sleep-data.csv", check.names = FALSE)
+str(sleep_df)
+```
+
+It's always good to take a look at the structure of the data. Main thing is I want to make sure of is the data is in wide format and each column is the right type. As you can see from these results, hour and minute is separated and presented as an integer. I will clean this up a little bit using `dplyr` so that we have each sleep stage duration in a single column with decimal places from minutes/60 representing the minutes column.
+
+```{r echo=TRUE, include=TRUE}
+sleep_summarized <- sleep_df %>% 
+  dplyr::group_by(
+    Date
+  ) %>% 
+  summarize(
+    "EEG_total_duration" = round(EEG_sleep_duration_hour + (EEG_sleep_duration_min/60), digits = 3),
+    "EEG_deep_duration" = round(EEG_deep_hour + (EEG_deep_min/60), digits = 3),
+    "EEG_REM_duration" = round(EEG_REM_hour + (EEG_REM_min/60), digits = 3),
+    "EEG_light_duration" = round(EEG_light_hour + (EEG_light_min/60), digits = 3),
+    "EEG_wake_duration" = round(EEG_wake_hour + (EEG_wake_min/60), digits = 3),
+    
+    "oura_total_duration" = round(oura_sleep_duration_hour + (oura_sleep_duration_min/60), digits = 3),
+    "oura_deep_duration" = round(oura_deep_hour + (oura_deep_min/60), digits = 3),
+    "oura_REM_duration" = round(oura_REM_hour + (oura_REM_min/60), digits = 3),
+    "oura_light_duration" = round(oura_light_hour + (oura_light_min/60), digits = 3),
+    "oura_wake_duration" = round(oura_wake_hour + (oura_wake_min/60), digits = 3),
+    
+    "whoop_total_duration" = round(whoop_sleep_duration_hour + (whoop_sleep_duration_min/60), digits = 3),
+    "whoop_deep_duration" = round(whoop_deep_hour + (whoop_deep_min/60), digits = 3),
+    "whoop_REM_duration" = round(whoop_REM_hour + (whoop_REM_min/60), digits = 3),
+    "whoop_light_duration" = round(whoop_light_hour + (whoop_light_min/60), digits = 3),
+    "whoop_wake_duration" = round(whoop_wake_hour + (whoop_wake_min/60), digits = 3)
+  )
+
+str(sleep_summarized)
+```
+
+Now we have numeric columns with the true durations presented in hour format with decimal representing minute / 60. 
+
+### Statistical Analysis to Compare to Criterion Measure
+
+Now I would like to compare the durations of total, deep, REM and light sleep and duration awake for the Oura Ring and Whoop to the Dreem 2 EEG. In order to make these comparisons, I will use two techniques:  
+- Pearson's Correlation Coefficient  
+- independent samples t-tests  
+- absolute error  
+- z-score absolute error  
+- mean absolute percent error  
+
+For all of these analyses, the Dreem 2 EEG will be used as the reference value and the values collected from the Oura Ring and Whoop will be used to separately calculate the comparison measures. The differences will be visualized using Bland-Altman plots. Bland-Altman plots display the relationship between to values that are on the same scale. It presents the difference between the two measurements on the y-axis and the average of the two measurements on the x-axis. The values from each device were matched by date (see `group_by` in the code snippet).  
+
+The actual data analysis can be viewed by following this link to my RShiny app!!! Interpretations are presented as well.
+
+### References
+
+Arnal, P. J., Thorey, V., Debellemaniere, E., Ballard, M. E., Bou Hernandez, A., Guillot, A., Jourde, H., Harris, M., Guillard, M., Van Beers, P., Chennaoui, M., & Sauvet, F. (2020). The Dreem Headband compared to polysomnography for electroencephalographic signal acquisition and sleep staging. Sleep, 43(11), zsaa097. https://doi.org/10.1093/sleep/zsaa097  
+  
+Chinoy, E. D., Cuellar, J. A., Jameson, J. T., & Markwald, R. R. (2022). Performance of Four Commercial Wearable Sleep-Tracking Devices Tested Under Unrestricted Conditions at Home in Healthy Young Adults. Nature and Science of Sleep, 14, 493–516. https://doi.org/10.2147/NSS.S348795  
+
+Craven, J., McCartney, D., Desbrow, B., Sabapathy, S., Bellinger, P., Roberts, L., & Irwin, C. (2022). Effects of Acute Sleep Loss on Physical Performance: A Systematic and Meta-Analytical Review. Sports Medicine (Auckland, N.Z.), 52(11), 2669–2690. https://doi.org/10.1007/s40279-022-01706-y  
+
+della Monica, C., Johnsen, S., Atzori, G., Groeger, J. A., & Dijk, D.-J. (2018). Rapid Eye Movement Sleep, Sleep Continuity and Slow Wave Sleep as Predictors of Cognition, Mood, and Subjective Sleep Quality in Healthy Men and Women, Aged 20–84 Years. Frontiers in Psychiatry, 9. https://www.frontiersin.org/articles/10.3389/fpsyt.2018.00255  
+
+Driller, M. W., Dunican, I. C., Omond, S. E. T., Boukhris, O., Stevenson, S., Lambing, K., & Bender, A. M. (2023). Pyjamas, Polysomnography and Professional Athletes: The Role of Sleep Tracking Technology in Sport. Sports, 11(1), Article 1. https://doi.org/10.3390/sports11010014  
+
+Halson, S. L., & Juliff, L. E. (2017). Chapter 2—Sleep, sport, and the brain. In M. R. Wilson, V. Walsh, & B. Parkin (Eds.), Progress in Brain Research (Vol. 234, pp. 13–31). Elsevier. https://doi.org/10.1016/bs.pbr.2017.06.006  
+
+Lee, J.-M., Byun, W., Keill, A., Dinkel, D., & Seo, Y. (2018). Comparison of Wearable Trackers’ Ability to Estimate Sleep. International Journal of Environmental Research and Public Health, 15(6), Article 6. https://doi.org/10.3390/ijerph15061265  
+
+Mah, C. D., Kezirian, E. J., Marcello, B. M., & Dement, W. C. (2018). Poor sleep quality and insufficient sleep of a collegiate student-athlete population. Sleep Health, 4(3), 251–257. https://doi.org/10.1016/j.sleh.2018.02.005  
+
+Merfeld, B., Mancosky, A., Luedke, J., Griesmer, S., Erickson, J. L., Carvalho, V., & Jagim, A. R. (2022). The Impact of Early Morning Training Sessions on Total Sleep Time in Collegiate Athletes.  
+  
+Miller, D. J., Sargent, C., & Roach, G. D. (2022). A Validation of Six Wearable Devices for Estimating Sleep, Heart Rate and Heart Rate Variability in Healthy Adults. Sensors (Basel, Switzerland), 22(16), 6317. https://doi.org/10.3390/s22166317
+
+O’Donnell, S., Beaven, C. M., & Driller, M. W. (2018). From pillow to podium: A review on understanding sleep for elite athletes. Nature and Science of Sleep, 10, 243–253. https://doi.org/10.2147/NSS.S158598  
+
+Stone, J. D., Ulman, H. K., Tran, K., Thompson, A. G., Halter, M. D., Ramadan, J. H., Stephenson, M., Finomore, V. S., Galster, S. M., Rezai, A. R., & Hagen, J. A. (2021). Assessing the Accuracy of Popular Commercial Technologies That Measure Resting Heart Rate and Heart Rate Variability. Frontiers in Sports and Active Living, 3, 585870. https://doi.org/10.3389/fspor.2021.585870  
+
+Svensson, T., Chung, U., Tokuno, S., Nakamura, M., & Svensson, A. K. (2019). A validation study of a consumer wearable sleep tracker compared to a portable EEG system in naturalistic conditions. Journal of Psychosomatic Research, 126, 109822. https://doi.org/10.1016/j.jpsychores.2019.109822  
+
+Walsh, N. P., Halson, S. L., Sargent, C., Roach, G. D., Nédélec, M., Gupta, L., Leeder, J., Fullagar, H. H., Coutts, A. J., Edwards, B. J., Pullinger, S. A., Robertson, C. M., Burniston, J. G., Lastella, M., Meur, Y. L., Hausswirth, C., Bender, A. M., Grandner, M. A., & Samuels, C. H. (2021). Sleep and the athlete: Narrative review and 2021 expert consensus recommendations. British Journal of Sports Medicine, 55(7), 356–368. https://doi.org/10.1136/bjsports-2020-102025  
+
+Watson, A. M. (2017). Sleep and Athletic Performance. Current Sports Medicine Reports, 16(6), 413. https://doi.org/10.1249/JSR.0000000000000418
+
