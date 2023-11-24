@@ -282,16 +282,16 @@ sections:
       # Contact (add or remove contact options as necessary)
       email: vatne.1@buckeyemail.osu.edu
       address:
-        street: 615 Irving Schottenstein Dr
+        street: Schumaker Complex, 615 Irving Schottenstein Dr
         city: Columbus
         region: OH
         postcode: '43210'
         country: United States
         country_code: US
-      directions: Sport science offices inside the athletic training room
-      office_hours:
-        - 'Tuesday 9:00 to 15:00'
-        - 'Wednesday 09:00 to 15:00'
+      # directions: Sport science offices inside the athletic training room
+      # office_hours:
+      #   - 'Tuesday 9:00 to 15:00'
+      #   - 'Wednesday 09:00 to 15:00'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
       contact_links:
         - icon: twitter
