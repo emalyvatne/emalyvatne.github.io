@@ -5,7 +5,7 @@ date: '2023-11-22'
 slug: COTS-wearable-sleep-vs-EEG
 categories: []
 subtitle: ''
-summary: ''
+summary: 'The purpose of this post is to demonstrate the statistical analysis used to compare the data collected from a commercial wearable device to gold-standards. In this example, I use my own personal sleep data across 30 nights collected from an electroencephalography headband and two commercial wearables. I present the different analysis and visualization approaches as well as their results using R and RShiny.'
 authors: []
 lastmod: '2023-11-22T20:57:45-05:00'
 projects: []
