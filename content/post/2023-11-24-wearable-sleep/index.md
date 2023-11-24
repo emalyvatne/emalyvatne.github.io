@@ -5,7 +5,7 @@ date: '2023-11-22'
 slug: COTS-wearable-sleep-vs-EEG
 categories: []
 subtitle: ''
-summary: 'The purpose of this post is to demonstrate the statistical analysis used to compare the data collected from a commercial wearable device to gold-standards. In this example, I use my own personal sleep data across 30 nights collected from an electroencephalography headband and two commercial wearables. I present the different analysis and visualization approaches as well as their results using R and RShiny.'
+summary: 'The purpose of this post is to define and demonstrate the statistical analysis techniques used to compare the data collected from a commercial wearable device to gold-standards. In this example, I use my own personal sleep data across 30 nights collected from an electroencephalography headband and two commercial wearables. I present the different analysis and visualization approaches as well as their results using R and RShiny.'
 authors: []
 lastmod: '2023-11-22T20:57:45-05:00'
 projects: []
@@ -153,6 +153,8 @@ Now I would like to compare the durations of total, deep, REM and light sleep an
 For all of these analyses, the Dreem 2 EEG will be used as the reference value and the values collected from the Oura Ring and Whoop will be used to separately calculate the comparison measures. The differences will be visualized using Bland-Altman plots. Bland-Altman plots display the relationship between to values that are on the same scale. It presents the difference between the two measurements on the y-axis and the average of the two measurements on the x-axis. The values from each device were matched by date (see `group_by` in the code snippet).
 
 The actual data analysis can be viewed by following this link to my RShiny app!!! Interpretations are presented as well.
+
+Feel free to check out my Github if you would like to [download the dataset](https://github.com/emalyvatne/emalyvatne.github.io/blob/main/content/post/2023-11-24-wearable-sleep/sleep-data.csv) and explore for yourself!
 
 ### References
 

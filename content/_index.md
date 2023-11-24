@@ -163,7 +163,10 @@ sections:
     content:
       title: Posts and Projects
       subtitle: ''
-      text: ''
+      text: |-
+        {{% callout note %}}
+        [Click here to view all and filter publications](./publication/).
+        {{% /callout %}}
       # Choose how many pages you would like to display (0 = all pages)
       count: 5
       # Filter on criteria
