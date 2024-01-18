@@ -1,5 +1,5 @@
 ---
-title: "Comparing Psychological Effects of Wet versus Dry FloatationRestricted Environmental Stimulation Therapy in College Students"
+title: "Comparing Psychological Effects of Wet versus Dry Floatation-Restricted Environmental Stimulation Therapy in College Students"
 
 event: The Ohio State University College of Education and Human Ecology Research Forum
 event_url: "https://u.osu.edu/ehestudentresearch/"
