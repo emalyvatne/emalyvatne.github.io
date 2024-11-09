@@ -2,7 +2,7 @@
 title: How to Export and Embed a Power BI Report as a PNG and PDF in the Body of an Email
 author: 'Emaly Vatne'
 date: '2024-11-05'
-slug: powerbiemail
+slug: Periodization
 categories: []
 subtitle: ''
 summary: 'Power Automate can be used to export a Power BI report (either a single page or the entire report) in the body of an email as a PNG and/or as an attachment as a PDF. This brief article will outline how to do this. However, it is important to note that some of the features described below may required paid licenses of Power BI and/or Power Automate.'
