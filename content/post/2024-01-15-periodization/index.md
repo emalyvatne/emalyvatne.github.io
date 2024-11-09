@@ -64,7 +64,7 @@ The email step I am using is Outlook Send an Email (V2). Add your recipients, a 
   }
 ]
 
-I addde the "@{utcNow()}" so that the PDF include the date and time that it was created. This will allow me to go through archived files and find a particular day I'm interested in very easily. 
+I added the "@{utcNow()}" so that the PDF include the date and time that it was created. This will allow me to go through archived files and find a particular day I'm interested in very easily. 
 
 In practical application, an email report is convenient but no one is going to want to go back through their emails and try to find a specific day. One way to address this is to add a step that saves the PDF in a Teams/Sharepoint folder. In whatever Team makes sense in your context, create a folder for these files to land. Come back to Power Automate and add a step after the email and add a step. Search for Sharepoint create file. Navigate to the folder you just created or that you want these to land in (find the team, Shared Documents, channel, and folder). Specify the name you want the file to be given (you can add the utcNow function again) and then for "File Content", select the file you want to created in the "Export To File for Power_BI Reports (PDF)" step.
 
