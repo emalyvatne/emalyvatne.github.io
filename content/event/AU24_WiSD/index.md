@@ -21,7 +21,7 @@ This session is grounded in and builds upon existing research and practices in s
 # all_day: false
 
 # Schedule page publish date (NOT talk date).
-# publishDate: '2024-09-07T00:00:00Z'
+publishDate: '2024-09-07T00:00:00Z'
 
 authors: 
 - admin
