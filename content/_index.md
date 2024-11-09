@@ -62,8 +62,8 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Graduate Research Associate and Assistant Sport Scientist
-          company: The Ohio State University Human Performance and Department of Athletics
+        - title: Assistant Sport Scientist
+          company: The Ohio State University Department of Athletics and Human Performance Collaborative
           company_url: 'https://hpc.osu.edu'
           company_logo: ''
           location: Columbus, OH
