@@ -18,7 +18,7 @@ and reduced negative feelings according to the STAI responses before and after t
 # all_day: false
 
 # Schedule page publish date (NOT talk date).
-# publishDate: '2024-03-01T00:00:00Z'
+publishDate: '2024-01-01T00:00:00Z'
 
 authors: 
 - admin
