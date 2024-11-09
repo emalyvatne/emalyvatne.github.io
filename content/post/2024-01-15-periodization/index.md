@@ -47,9 +47,11 @@ To add the image of the Power BI report page to the body of the email, you're go
 
 In order to add the image in the body of an email, we're going to have to convert it to a variable. Between the second Power BI Export step and the email step, insert a step and choose "Initialize a Variable". Name it "Power BI Export Image" and specify it as a string. In the value box, paste the following code:
 
-"<div style="height:auto; overflow:auto;">
+```html
+<div style="height:auto; overflow:auto;">
     <img src="data:image/png;base64,@{outputs('Export_To_File_for_Power_BI_Reports')?['body']?['$content']}" style="width:auto; max-width:100%;" alt="Power BI Export" />
-</div>"
+</div>
+```
 
 This code is going to build the image. 
 
