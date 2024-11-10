@@ -1,5 +1,5 @@
 ---
-title: How to Export and Embed a Power BI Report as a PNG and PDF in the Body of an Email
+title: How to Export and Attach a Power BI Report as a PNG and PDF in an Email
 author: 'Emaly Vatne'
 date: '2024-11-05'
 slug: Periodization
