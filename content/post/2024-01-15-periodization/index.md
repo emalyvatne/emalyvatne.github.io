@@ -17,7 +17,7 @@ First, you need to publish a Power BI report to the Power BI service. Power BI r
 
 Data driven alerts allow for notifications when the value of a gauge, KPI, and card changes beyond a threshold that you set. Configuring a data driven alert is going to be the first step in this process. To do this, navigate to your Power BI report and identify a gauge, KPI, and card that you would like to trigger an email of the report being sent. Make sure the title of whatever you'd like to use is unique and identifiable. For example, if you're configuring this for multipe teams, it'd be best to note the abbreviated team name in the title and what it's representing. In the context of sport science, this might look like the number of athletes who have synced a sleep and recovery device like an Oura ring, submitted a daily wellness survey, or if new data are available for today's training session. Once you have the gauge, KPI, and card you'd like to use, zoom in to it and click the pin icon. A pop-up window will appear and prompt you to pin it to a Power BI dashboard. If you already have one, it'll give you the option to use it or you can create a new one. See the screenshots below.
 
-
+[https://github.com/emalyvatne/portfolio_resources/blob/main/EmailPowerBI_PowerAutomate/pinvisual.png](Where to click to pin a card in a Power BI Report)
 
 
 
