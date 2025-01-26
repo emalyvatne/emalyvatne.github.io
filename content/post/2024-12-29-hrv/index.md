@@ -50,3 +50,15 @@ HRV is affected by menstrual cycle phase in eumhennoric women. During the luteal
 
 **REFERENCES**  
 
+Altini, M. (2024). How Data Can Capture Recovery: The Case for Heart Rate Variability. In P. Düking & B. Sperlich (Eds.), Individualizing Training Procedures with Wearable Technology (pp. 7–19). Springer International Publishing. https://doi.org/10.1007/978-3-031-45113-3_2
+Bailey, C. (2019). Longitudinal Monitoring of Athletes: Statistical Issues and Best Practices. Journal of Science in Sport and Exercise, 1(3), 217–227. https://doi.org/10.1007/s42978-019-00042-4
+Buchheit, M. (2014). Monitoring training status with HR measures: Do all roads lead to Rome? Frontiers in Physiology, 5. https://doi.org/10.3389/fphys.2014.00073
+Flatt, A. A., Allen, J. R., Keith, C. M., Martinez, M. W., & Esco, M. R. (2021). Season-Long Heart-Rate Variability Tracking Reveals Autonomic Imbalance in American College Football Players. International Journal of Sports Physiology and Performance, 16(12), 1834–1843. https://doi.org/10.1123/ijspp.2020-0801
+Heart Rate Variability in Professional and Semi-Professional Soccer: A Scoping Review—Google Search. (n.d.). Retrieved January 12, 2025, from https://www.google.com/search?q=Heart+Rate+Variability+in+Professional+and+Semi-Professional+Soccer%3A+A+Scoping+Review&rlz=1C5GCEM_enUS1104US1104&sourceid=chrome&ie=UTF-8
+Heathers, J., Quintana, D., Angus, D., Krygier, J., Kemp, A. H., & Rosnay, M. de. (2018). Water consumption as a source of error in the measurement of heart rate variability. OSF. https://doi.org/10.31219/osf.io/83exy
+Merrigan, J. J., Stone, J. D., Kraemer, W. J., Friend, C., Lennon, K., & Hagen, J. A. (n.d.). ANALYSIS OF SLEEP, NOCTURNAL PHYSIOLOGY, AND PHYSICAL DEMANDS OF NCAA WOMEN’S ICE HOCKEY ACROSS A CHAMPIONSHIP SEASON.
+Nuuttila, O.-P., Kyröläinen, H., Kokkonen, V.-P., & Uusitalo, A. (2024). Morning versus Nocturnal Heart Rate and Heart Rate Variability Responses to Intensified Training in Recreational Runners. Sports Medicine - Open, 10(1), 120. https://doi.org/10.1186/s40798-024-00779-5
+(PDF) What Is Behind Changes in Resting Heart Rate and Heart Rate Variability? A Large-Scale Analysis of Longitudinal Measurements Acquired in Free-Living. (2024). ResearchGate. https://doi.org/10.3390/s21237932
+Plews, D. J., Laursen, P. B., Kilding, A. E., & Buchheit, M. (2012). Heart rate variability in elite triathletes, is variation in variability the key to effective training? A case comparison. European Journal of Applied Physiology, 112(11), 3729–3741. https://doi.org/10.1007/s00421-012-2354-4
+Stephenson, M. D., Thompson, A. G., Merrigan, J. J., Stone, J. D., & Hagen, J. A. (2021). Applying Heart Rate Variability to Monitor Health and Performance in Tactical Personnel: A Narrative Review. International Journal of Environmental Research and Public Health, 18(15), 8143. https://doi.org/10.3390/ijerph18158143
+Thornton, H. R., Delaney, J. A., Duthie, G. M., & Dascombe, B. J. (2019). Developing Athlete Monitoring Systems in Team Sports: Data Analysis and Visualization. International Journal of Sports Physiology and Performance, 14(6), 698–705. https://doi.org/10.1123/ijspp.2018-0169
