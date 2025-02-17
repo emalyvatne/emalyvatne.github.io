@@ -2,7 +2,7 @@
 title: Applying Logistic Regression to Create an Expected Pass Model and Identifying Top Overperformers
 author: 'Emaly Vatne'
 date: '2025-02-15'
-slug: Periodization
+slug: expectedpass
 categories: []
 subtitle: ''
 summary: 'In this post, I show the code for creating an "Expected Pass" model using logistic regression, and then I use it to identify which female footballers outperform the prediction for their passes.'
