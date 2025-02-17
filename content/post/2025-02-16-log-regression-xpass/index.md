@@ -1,5 +1,5 @@
 ---
-title: Applying Logistic Regression to Create and Expected Pass Model and Identifying Top Overperformers
+title: Applying Logistic Regression to Create an Expected Pass Model and Identifying Top Overperformers
 author: 'Emaly Vatne'
 date: '2025-02-15'
 slug: Periodization
