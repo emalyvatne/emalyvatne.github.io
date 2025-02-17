@@ -5,7 +5,7 @@ date: '2025-02-15'
 slug: Periodization
 categories: []
 subtitle: ''
-summary: 'Power Automate can be used to export a Power BI report (either a single page or the entire report) in the body of an email as a PNG and/or as an attachment as a PDF. This brief article will outline how to do this. However, it is important to note that some of the features described below may required paid licenses of Power BI and/or Power Automate.'
+summary: 'In this post, I show the code for creating an "Expected Pass" model using logistic regression, and then I use it to identify which female footballs outperform the prediction for their passes.'
 authors: []
 lastmod: '2025-02-14T20:57:45-05:00'
 projects: []
