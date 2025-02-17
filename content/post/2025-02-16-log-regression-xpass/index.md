@@ -5,7 +5,7 @@ date: '2025-02-15'
 slug: Periodization
 categories: []
 subtitle: ''
-summary: 'In this post, I show the code for creating an "Expected Pass" model using logistic regression, and then I use it to identify which female footballs outperform the prediction for their passes.'
+summary: 'In this post, I show the code for creating an "Expected Pass" model using logistic regression, and then I use it to identify which female footballers outperform the prediction for their passes.'
 authors: []
 lastmod: '2025-02-14T20:57:45-05:00'
 projects: []
