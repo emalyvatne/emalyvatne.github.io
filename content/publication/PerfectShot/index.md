@@ -1,11 +1,6 @@
 ---
 title: "Perfect short reveal: Human-centered machine learning approach in analyzing goalscoring strategies in soccer"
 authors:
-- admin
-- Justin Merrigan
-- Jason Stone
-- Catherine Saenz
-- Joshua Hagen
 - Abdullah, M.
 - Yazbeck, M.
 - Alhanouti, S.

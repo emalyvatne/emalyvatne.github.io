@@ -1,16 +1,15 @@
 ---
-title: "The Impact of Team Practice Block Start Times on Sleep Characteristics in Collegiate Athletes (Under Review)"
+title: "Criterion validity of open-source methods for processing R-R intervals in determining heart rate variability metrics(In Preparation)"
 authors:
 - admin
+- Hana Ulman
 - Matthew Vatne
 - Daniel Cencer
-- William Kraemer
+- Justin Merrigan
+- Kyle Pulvermacher
 - Catherine Saenz
 - Bradley Robinson
-- Paul Jones
 - Jason Stone
-- Justin Merrigan
-- Tyler Carpenter
 - Josh Hagen
 author_notes: ""
 date: "2025-01-31T00:00:00Z"

@@ -1,5 +1,5 @@
 ---
-title: "The Impact of Team Practice Block Start Times on Sleep Characteristics in Collegiate Athletes (Under Review)"
+title: "Establishing Comprehensive Normative Values of Objective Sleep Quantity and Quality in Collegiate Athletes (Under Review)"
 authors:
 - admin
 - Matthew Vatne
@@ -7,9 +7,12 @@ authors:
 - William Kraemer
 - Catherine Saenz
 - Bradley Robinson
-- Paul Jones
 - Jason Stone
 - Justin Merrigan
+- Kyle Pulvermacher
+- Michael Dial
+- Paul Jones
+- Alexandria Montalbano
 - Tyler Carpenter
 - Josh Hagen
 author_notes: ""
