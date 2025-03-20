@@ -1,13 +1,13 @@
 ---
 title: "Perfect short reveal: Human-centered machine learning approach in analyzing goalscoring strategies in soccer"
 authors:
-- Abdullah, M.
-- Yazbeck, M.
-- Alhanouti, S.
-- Talebi, A.
+- Maha Yazbeck
+- Mohammad Abdullah
+- Sura Alhanouti
 - admin
-- Hagen, J.
-- Krening, S. 
+- Josh Hagen
+- Theodore Allen
+- Samantha Krening
 author_notes: ""
 date: "2025-01-31T00:00:00Z"
 publishDate: "2025-01-31T00:00:00Z"
