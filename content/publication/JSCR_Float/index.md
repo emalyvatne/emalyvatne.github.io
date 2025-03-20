@@ -1,5 +1,5 @@
 ---
-title: "Effects of Daytime Floatation-REST on Nocturnal Cardiovascular Physiology, Sleep, and Subjective Recovery in Collegiate Student-Athletes: A Comprehensive Observational Study --- Pre-Print"
+title: "Effects of Daytime Floatation-REST on Nocturnal Cardiovascular Physiology, Sleep, and Subjective Recovery in Collegiate Student-Athletes: A Comprehensive Observational Study"
 authors:
 - admin
 - Justin Merrigan
