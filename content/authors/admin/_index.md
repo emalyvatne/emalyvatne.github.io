@@ -25,7 +25,7 @@ organizations:
     url: https://hpc.osu.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include applied sport science, recovery interventions, and data analysis, visualization, science, and engineering. 
+bio: My research interests include applied sport science, effects of recovery interventions, and data analysis, visualization, and engineering. 
 
 # Interests to show in About widget
 interests:
@@ -35,7 +35,6 @@ interests:
   - Data analysis and visualization
   - Wearable devices
   - Internal load
-  - Data science
   - Data engineering
 
 # Education to show in About widget
@@ -85,7 +84,7 @@ social:
       header: true
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
-    link: https://scholar.google.com/citations?user=jHgQp7RV_FoC&hl=en&oi=ao
+    link: https://scholar.google.com/citations?user=jHgQp7RV_FoC&hl=en
   - icon: github
     icon_pack: fab
     link: https://github.com/emalyvatne
@@ -104,4 +103,4 @@ social:
 highlight_name: true
 ---
 
-Hi!! My name is Emaly Vatne and I am a second-year PhD student in kinesiology and statistical data analysis at Ohio State. I also work for the Ohio State Department of Athletics and Human Performance Collaborative in sport and performance science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!
+Hi!! My name is Emaly Vatne and I am a third-year PhD student in kinesiology and statistical data analysis at Ohio State. I also work for the Ohio State Department of Athletics and Human Performance Collaborative in sport and performance science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!
