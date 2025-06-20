@@ -11,9 +11,9 @@ lastmod: '2025-06-17T20:57:45-05:00'
 projects: []
 ---
 
-Managing and mitigating the negative effects of long-haul travel is a timely challenge facing collegiate athletics departments. This was particularly evident to me when I was watching the women's tennis NCAA tournament draw in the spring. There were a remarkable number of teams that had to travel what I perceived to be substantial distances for their first round matches. It did not appear to me that the optimal set of match-ups was identified to minimize the distance traveled while maintaining the appropriateness (e.g., in terms of RPI or other indicators of competitive level) of the two teams competing. Ultimately, this is one of a few examples I can think of where a scheduling and route optimization data science problem would be relevant.
+Managing and mitigating the negative effects of long-haul travel is a timely challenge facing collegiate athletics departments. This was particularly evident to me when I was watching the women's tennis NCAA tournament draw back in the spring. There were a remarkable number of teams that had to travel what I perceived to be substantial distances for their first round matches. It did not appear to me that the optimal set of match-ups was identified to minimize the distance traveled while maintaining the appropriateness (e.g., in terms of RPI or other indicators of competitive level) of the two teams competing. Ultimately, this is one of a few examples I can think of where a scheduling and route optimization data science problem would be relevant.
 
-While building a 64-team NCAA women's tennis tournament would be a fun project, it would likely take quite a bit of bandwidth and computational power. I thought it would be good to start to demonstrate a simpler example of a scheduling and route optimization problem. To do this, I decided to start by taking the 2025 Big Ten football schedule and try to identify the route someone would need to take to visit every Big Ten football stadium for a home game while minimizing the total distance traveled. 
+While building a 64-team NCAA women's tennis tournament would be a fun project, it would likely take quite a bit of bandwidth and computational power. I thought it would be good to start to demonstrate a simpler example of a scheduling and route optimization problem. To do this, I decided to start by taking the 2025 Big Ten football schedule and try to identify the route someone would need to take to visit every Big Ten football stadium for a home game while minimizing the total distance traveled when traveling from where I am: Columbus, Ohio 
 
 The full project and the code to do all of the subsequently described web-scraping, cleaning, and analysis can be found at my github: https://github.com/emalyvatne/bigtenfootball_routeoptimization
 
@@ -26,7 +26,7 @@ Starting this data science problem involves collecting:
 
 ##### Big Ten School Details and Distance Matrix
 
-The first assumption we will make in this problem is that the stadium is located in a negligible distance from the latitude and longitude of the city that the university is listed in. This also means we are not accounting for certain things such as mode of travel (e.g., driving versus flying) and ancillary details such as distance between a given airport and that stadium. While these things will inevitably add up when traveling to 18 schools, we are overlooking these details for the sake of this problem. In a more comprehensive approach to this question, I would like to have included the flight tracker API and Google Maps API to account for more accurate estimates of distances traveled. With all of that being said, we'll proceed with this question by obtaining the latitude and longitude of the Big Ten institutions by using a simple webscraper to collect this information off of Wikipedia: 
+The first assumption we will make in this problem is that the stadium is located in a negligible distance from the latitude and longitude of the city that the university is listed in. This also means we are not accounting for certain things such as mode of travel (e.g., driving versus flying) and ancillary details such as distance between a given airport and that stadium. While these things will inevitably add up when traveling to 18 schools, we are overlooking these details for the sake of this optimization problem example. In a more comprehensive approach to this question, I would like to have included the flight tracker API and Google Maps API to account for more accurate estimates of distances and durations traveled. With all of that being said, we'll proceed with this question by obtaining the latitude and longitude of the Big Ten institutions by using a simple webscraper to collect this information off of Wikipedia: 
 
 ```
 import pandas as pd
@@ -69,7 +69,7 @@ full_wiki_locations = pd.DataFrame(data, columns = COLUMNS)
 clean_locations = full_wiki_locations[['Institution', 'Latitude', 'Longitude', 'Location']]
 ```
 
-Next, we need to create a matrix of distances between each of the 18 schools. We will leverage the `geopy` package that provides the geodesic distances between two geo-coordinates, or the shortest path between two points on a curved surface. 
+Next, we need to create a matrix of distances between each of the 17 other schools and Ohio State/Columbus. We will leverage the `geopy` package that provides the geodesic distances between two geo-coordinates, or the shortest path between two points on a curved surface. 
 
 Here is the code for those computations:
 
@@ -104,9 +104,9 @@ for t in TEAMS:
     miles.append([t, *distance])
 mile_df_wide = pd.DataFrame(miles, columns = ['', *TEAMS])
 ```
-I threw this matrix into power bi for a quick vizualization of distances between schools. Intuitively, the west coast additions consistently travel absurd distances. (The diagonal line of 0s is where that school is lined up with itself while green represents a smaller distance and red is larger).
+I threw this matrix into power bi after filtering to just show distances from Ohio State to other schools for a quick vizualization of distances between schools. Intuitively, the west coast additions consistently travel absurd distances. (The diagonal line of 0s is where that school is lined up with itself while green represents a smaller distance and red is larger).
 
-![Big Ten Distance Matrix](distance_matrix.png)
+![Big Ten Distance Matrix](distance_table.jpg)
 
 #### Big Ten Schedule
 
@@ -158,220 +158,74 @@ By framing this travel task as a TSP and applying algorithmic solutions, we can 
 There are a few difference technical approaches to this problem, but describing and defining them is beyond the scope of this article. For this use case, I will apply the Miller-Tucker-Zemlin (MTZ) formulation because it appears to be well-known for the TSP. This approach allows for additional constraints and variables in addition to the conventional TSP. The code below presents the development and running of the model:
 
 ```
-import os
-import pandas as pd
-# pd.options.display.max_rows = None
-from pulp import *
-
-main_dir = os.getcwd()
-output_dir = f"{main_dir}/outputs"
-
-schedule = pd.read_csv(f"{output_dir}/schedule.csv")
-schedule = schedule.rename(columns={"Unnamed: 7": "LocationDesignation"})
-date_df = schedule.set_index('Date')
-mile_matrix_wide = pd.read_csv(f"{output_dir}/mile_matrix_wide.csv")
-
-mile_matrix_wide = mile_matrix_wide.rename(columns={"Unnamed: 0": "source"})
-mile_matrix_long = mile_matrix_wide.melt(id_vars="source", var_name="destination", value_name="miles")
-
-# ----- map mile matrix school names to the college football schedule -----
-matrixlist_to_team = {
-    'University of Illinois Urbana-Champaign': 'Illinois',
-    'Indiana University Bloomington': 'Indiana',
-    'University of Iowa': 'Iowa',
-    'University of Maryland, College Park': 'Maryland',
-    'University of Michigan': 'Michigan',
-    'Michigan State University': 'MichiganState',
-    'University of Minnesota Twin Cities': 'Minnesota',
-    'University of Nebraska-Lincoln': 'Nebraska',
-    'Northwestern University': 'Northwestern',
-    'The Ohio State University': 'OhioState',
-    'University of Oregon': 'Oregon',
-    'Pennsylvania State University': 'PennState',
-    'Purdue University': 'Purdue',
-    'Rutgers, The State University of New Jersey, New Brunswick': 'Rutgers',
-    'University of Southern California': 'SouthernCalifornia',
-    'University of California, Los Angeles': 'UCLA',
-    'University of Washington': 'Washington',
-    'University of Wisconsin-Madison': 'Wisconsin'
-}
-mile_matrix_long['source'] = mile_matrix_long['source'].map(matrixlist_to_team)
-mile_matrix_long['destination'] = mile_matrix_long['destination'].map(matrixlist_to_team)
-
-# ----- clean the schedule -----
-# rename columns
-schedule.columns = ['Unnamed', 'Rk', 'Date', 'Time', 'Day', 'Winner', 'Pts', 'LocationDesignation', 'Loser', 'Pts.1', 'Notes']
-# create home/away assignment
-schedule['Home'] = schedule.apply(
-    lambda row: row['Loser'] if row['LocationDesignation'] == '@' else row['Winner'],
-    axis=1
-)
-schedule['Away'] = schedule.apply(
-    lambda row: row['Winner'] if row['LocationDesignation'] == '@' else row['Loser'],
-    axis=1
-)
-
-# assign points
-schedule['HomePts'] = schedule.apply(
-    lambda row: row['Pts.1'] if row['LocationDesignation'] == '@' else row['Pts'],
-    axis=1
-)
-schedule['AwayPts'] = schedule.apply(
-    lambda row: row['Pts'] if row['LocationDesignation'] == '@' else row['Pts.1'],
-    axis=1
-)
-
-# select and order desired columns
-schedule = schedule[['Rk', 'Date', 'Time', 'Day', 'Home', 'HomePts', 'Away', 'AwayPts', 'Notes']]
-# clean the Home and Away column to remove rankings
-schedule['Home'] = schedule['Home'].str.replace('\xa0', '', regex=False).str.replace(r"[ ()\d]", "", regex=True)
-schedule['Away'] = schedule['Away'].str.replace('\xa0', '', regex=False).str.replace(r"[ ()\d]", "", regex=True)
-
-# There are 17 Big Ten teams and 17 locations to visit
-TEAMS = ['Home', *sorted(list(schedule['Home'].unique()))]
-
-# There are 25 game dates [len(schedule['Date'].unique())] in the 2024 season
+# Define constants
 DATES = [0, *list(schedule['Date'].unique())]
+TEAMS = sorted(schedule['Home'].unique())
+DESTINATIONS = [t for t in TEAMS if t != "OhioState"]
 
-# Define Problem  
+# Define LP problem
+prob = LpProblem("OhioState_Travel", LpMinimize)
 
-prob = LpProblem("Matrix Problem",LpMinimize)
-# Creating a Set of Variables
-# date, source, desetination
-choices = LpVariable.dicts("Interview",(DATES,TEAMS,TEAMS), cat='Binary')
+# Define decision variables
+choices = LpVariable.dicts("Travel", (DATES, ['OhioState'], DESTINATIONS), cat='Binary')
 
-# Added arbitrary objective function
-prob += 0, "Arbitrary Objective Function"
+# Each destination is visited exactly once
+for t2 in DESTINATIONS:
+    prob += lpSum([choices[d]['OhioState'][t2] for d in DATES[1:]]) == 1, f"Visit_{t2}"
 
-# ---------------- CONSTRAINTS ------------------------
-
-# ensure each arena is departed from exactly 1 time
-for t2 in TEAMS:
-    prob += lpSum([choices[d][t1][t2] for d in DATES[1:] for t1 in TEAMS]) == 1, ""
-
-# ensure each arena is visited exactly 1 time
-for t1 in TEAMS:
-    prob += lpSum([choices[d][t1][t2] for d in DATES[1:] for t2 in TEAMS]) == 1, ""
-
-# minimize total number of visits
-prob += lpSum([choices[d][t1][t2] for d in DATES[1:] for t1 in TEAMS for t2 in TEAMS if t1 != t2]) <= 33
-
-# start from home and end at home
-prob +=lpSum([choices[d]['Home'][t2] for t2 in TEAMS[1:] for d in DATES[1:4]]) == 1
-prob +=lpSum([choices[d][t1]['Home'] for t1 in TEAMS[1:] for d in DATES[-1:]]) == 1
-
-# make sure visits are played on home team dates
+# Only one trip allowed per date
 for d in DATES[1:]:
-    for t2 in TEAMS[1:]:
-        for t1 in TEAMS:
-            if schedule[(schedule['Date'] == d) & (schedule['Home'] == t2)].shape[0] == 0:
-                prob += choices[d][t1][t2] == 0, ""
+    prob += lpSum([choices[d]['OhioState'][t2] for t2 in DESTINATIONS]) <= 1, f"OneTripPerDay_{d}"
 
-    prob += lpSum([choices[d][t1][t2] for t1 in TEAMS for t2 in TEAMS]) <= 1, ""
+# Ensure that travel only happens on valid home game dates for the destination
+for d in DATES[1:]:
+    for t2 in DESTINATIONS:
+        if schedule[(schedule['Date'] == d) & (schedule['Home'] == t2)].shape[0] == 0:
+            prob += choices[d]['OhioState'][t2] == 0, f"NoGame_{d}_{t2}"
 
-for d in DATES:
-    for t1 in TEAMS[1:]:
-        for t2 in TEAMS[1:]:
-            if t1 == t2:
-                prob += choices[d][t1][t2] == 0, ""
-
-# Ensure that visits are sequential by dates
-for i, d in enumerate(DATES[1:-1]):
-    for t1 in TEAMS:
-        for t2 in TEAMS[1:]:
-            if t1 != t2:
-                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t2][t3] for d2 in DATES[i+1:i+4] for t3 in TEAMS if t3 != t2]), f""
-
-for i, d in enumerate(DATES[2:]):
-    for t1 in TEAMS[1:]:
-        for t2 in TEAMS:
-            if t1 != t2:
-                prob += choices[DATES[i]][t1][t2] <= lpSum([choices[d2][t3][t1] for d2 in DATES[i-4:i] for t3 in TEAMS if t3 != t1]), f""
-
-# Minimize travel distance for each segment
-if (t1, t2) in mile_matrix_long.index:
-    miles = mile_matrix_long.loc[(t1, t2), 'miles']  
-    if isinstance(miles, pd.Series):
-        miles = miles.iloc[0]
-        
-    prob += choices[d][t1][t2] * miles <= 1100
-
-    # 1.  Build a truly unique MultiIndex (strip stray spaces/ \xa0 first)
-mile_matrix_long = (
-    mile_matrix_long
-        .assign(source=lambda d: d["source"].str.strip(),      # <- kills \xa0 & spaces
-                destination=lambda d: d["destination"].str.strip())
-        .drop_duplicates(["source", "destination"])            # guarantee uniqueness
-        .set_index(["source", "destination"])
-        .sort_index()
-)
-
-# 2.  Convert the miles column to a plain Python dict for O(1) scalar lookup
-distance_lookup = mile_matrix_long["miles"].to_dict()
-
-# 3.  Build the algebraic expression once so you can re-use it
+# Objective: minimize total travel distance
 total_distance = lpSum(
-    choices[d][t1][t2] * distance_lookup[(t1, t2)]
-    for d  in DATES[1:]            # skip dummy element 0
-    for t1 in TEAMS[1:]            # "
-    for t2 in TEAMS[1:] if t1 != t2
+    choices[d]['OhioState'][t2] * distance_lookup[('OhioState', t2)]
+    for d in DATES[1:]
+    for t2 in DESTINATIONS
+    if ('OhioState', t2) in distance_lookup
 )
+prob += total_distance, "MinimizeTravelDistance"
+prob += total_distance <= 14000, "MaxTravelDistance"
 
-# 4.  Tell PuLP what you actually want
-prob += total_distance, "MinimizeTravelDistance"   # <- the objective
-prob += total_distance <= 14_000, "TravelDistanceLimit"  # <- optional hard cap
-
-# 5.  Solve
+# Solve
 prob.solve()
 print("Status:", LpStatus[prob.status])
-print("Best total miles:", value(total_distance))
+print("Total Miles Traveled:", value(total_distance))
 
-debug = ""
+# Extract results
 if LpStatus[prob.status] == 'Optimal':
-    print('solved problem')
-    matrix = []
-    for t2 in TEAMS:
-        row = []
-        for t1 in TEAMS:
-            value = 0
-            for d in DATES:
-                if choices[d][t1][t2].varValue == 1:
-                    value = d
-            row.append(value)
+    travel_schedule = []
+    for d in DATES[1:]:
+        for t2 in DESTINATIONS:
+            if choices[d]['OhioState'][t2].varValue == 1:
+                travel_schedule.append({'source': 'OhioState', 'destination': t2, 'date': d})
 
-        matrix.append(row)
-
-    matrix_df = pd.DataFrame(matrix, columns=TEAMS)
-    matrix_df.index = TEAMS
-
+    solution_long = pd.DataFrame(travel_schedule)
+    solution_long['date'] = pd.to_datetime(solution_long['date'], format='%b %d, %Y', errors='coerce')
+    solution_long = solution_long.sort_values('date')
+    solution_long.to_csv(f"{output_dir}/osu_outcome_travel_schedule.csv")
 else:
-    print('Fail')
-
-# ----- clean the final schedule up a little bit -----
-
-data = []
-df = matrix_df.copy()
-solution_long = df.melt(id_vars="destination", var_name="source", value_name="date")
-solution_long = solution_long[solution_long['date'] != '0']
-solution_long['date'] = (
-    pd.to_datetime(
-        solution_long['date'].str.strip(),
-        format='%b %d, %Y',
-        errors='coerce'
-    )
-)
-solution_long = solution_long.sort_values('date', ascending=True)
-solution_long = solution_long[["source", "destination", "date"]]
+    print("Failed to find an optimal solution.")
 ```
 
-The contraints of this problem are the (1) each stadium is visited once, (2) stadiums are only visited when there is a home game at that location, (3) the visits must be in chronological order of date, and (4) distances traveled must be minimized and subtours should be avoided.
+The contraints of this problem are the (1) each stadium is visited once, (2) stadiums are only visited when there is a home game at that location, (3) the visits must be in chronological order of date, and (4) distances traveled must be minimized and subtours should be avoided, and (5) all travel originates from Columbus, Ohio.
 
 #### Results
 
 The final schedule on the route is shown below:
 
-![Final Schedule](final_schedule.png)
+![Final Schedule](full_final_schedule_CBUS.png)
 
-![Final Travel Route](final_travel_route.png)
+![Final Travel Route](final_schedule_CBUS.png)
 
+Overall, it's kind of hard to tell if this is the "most optimal" route, but I think this is another demonstration of why implementing a data science approach would be extremely worthwhile. Doing this arbitrarily or manually would make it extremely difficult to gauge if it is the best solution.
 
+#### Next Steps and Future Applications
+
+This was a (largely oversimplified) example application of an optimization problem, but there are many applications for this in sport strategy. Another example, as I described earlier, could be to use this approach to build an NCAA tournament bracket that maximizes the matchups in terms of competitivness but also minimizes the distances that teams have to travel for their region and to reach their host teams. Another application could be to use it to build it to build a single team's schedule - especially Olympic sports. For example, it would be interesting to see what opponents would be best to schedule to play against that minimize the distance travel and maximize the benefit to a team's end-of-season RPI.
