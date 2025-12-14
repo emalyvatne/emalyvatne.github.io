@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Emaly Vatne
+title: Emaly Vatne, PhD ABD, CPSS, CSCS
 
 # Name pronunciation (optional)
 # name_pronunciation: 
 
 # Full name (for SEO)
 first_name: Emaly
-last_name: Vatne, PhD ABD, CPSS
+last_name: Vatne
 
 # Status emoji
 # status:
