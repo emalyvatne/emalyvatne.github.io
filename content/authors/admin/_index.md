@@ -7,7 +7,7 @@ title: Emaly Vatne
 
 # Full name (for SEO)
 first_name: Emaly
-last_name: Vatne
+last_name: Vatne, PhD ABD, CPSS
 
 # Status emoji
 # status:

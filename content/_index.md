@@ -133,6 +133,15 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - certificate_url: 'https://www.nsca.com/certification/cpss/?srsltid=AfmBOop0tqHIyhEOvS5VMCsBlukbM82O-ZlLvEfN5PBrGWjb1zl6DhzI'
+          date_end: ''
+          date_start: '2025-12-13'
+          description: ''
+          # icon: ''
+          organization: National Strength and Conditioning Association
+          organization_url: 'https://www.nsca.com/'
+          title: 'NSCA Certified Performance & Sport Scientist'
+          url: ''
         - certificate_url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/'
           date_end: ''
           date_start: '2023-09-01'
