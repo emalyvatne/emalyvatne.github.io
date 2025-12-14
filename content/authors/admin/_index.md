@@ -17,12 +17,12 @@ last_name: Vatne
 superuser: true
 
 # Role/position/tagline
-role: Assistant Sport Scientist at The Ohio State University Department of Athletics and Human Performance Collaborative
+role: Applied Sport Scientist at Racing Louisville and PhD Candidate at The Ohio State University
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: The Ohio State University
-    url: https://hpc.osu.edu/
+  - name: Racing Louisville FC and The Ohio State University Human Performance Collaborative
+    url: https://hpc.osu.edu/people/emaly-vatne
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include applied sport science, effects of recovery interventions, and data analysis, visualization, and engineering. 
@@ -103,4 +103,4 @@ social:
 highlight_name: true
 ---
 
-Hi!! My name is Emaly Vatne and I am a third-year PhD student in kinesiology and statistical data analysis at Ohio State. I also work for the Ohio State Department of Athletics and Human Performance Collaborative in sport and performance science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!
+Hi!! My name is Emaly Vatne and I am a PhD Candidate (all-but-dissertation) in kinesiology and statistical data analysis at Ohio State. I currently serve as the Applied Sport Scientist with Racing Louisville FC in the NWSL. I previously worked for the Ohio State Department of Athletics and Human Performance Collaborative in sport and performance science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!

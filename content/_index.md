@@ -62,13 +62,21 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - title: Applied Sport Scientist
+          company: Racing Louisville FC
+          company_url: 'https://www.racingloufc.com/'
+          company_logo: ''
+          location: Louisville, KY
+          date_start: '2025-09-15'
+          date_end: ''
+          description: ''
         - title: Assistant Sport Scientist
           company: The Ohio State University Department of Athletics and Human Performance Collaborative
-          company_url: 'https://hpc.osu.edu'
+          company_url: 'https://hpc.osu.edu/people/emaly-vatne'
           company_logo: ''
           location: Columbus, OH
           date_start: '2022-08-01'
-          date_end: ''
+          date_end: '2025-09-05'
           description: ''
         - title: X-Force Fellow in Data Science and Engineering Research
           company: National Security Innovation Network and Army National Guard
