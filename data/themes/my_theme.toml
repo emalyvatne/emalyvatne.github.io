@@ -3,12 +3,15 @@ name = "my_theme"
 
 [light]
   # Primary
-  primary = "#f01b31"
+  # primary = "#f01b31"
+  primary = "#a58de1ff"
 
   # Menu
   menu_primary = "#fff"
   menu_text = "#34495e"
-  menu_text_active = "#f01b31"
+  # menu_text_active = "#f01b31"
+  menu_text_active = "#a58de1ff"
+
   menu_title = "#2b2b2b"
 
   # Home sections
@@ -17,7 +20,10 @@ name = "my_theme"
 
 [dark]
   # Primary
-  primary = "#f01b31"
+  # primary = "#f01b31"
+  primary = "#a58de1ff"
 
-  link = "#f01b31"
-  link_hover = "#f01b31"
+  # link = "#f01b31"
+  # link_hover = "#f01b31"
+  link = "#a58de1ff"
+  link_hover = "#a58de1ff"

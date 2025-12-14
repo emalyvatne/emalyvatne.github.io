@@ -103,4 +103,6 @@ social:
 highlight_name: true
 ---
 
-Hi!! My name is Emaly Vatne and I am a PhD Candidate (all-but-dissertation) in kinesiology and statistical data analysis at Ohio State. I currently serve as the Applied Sport Scientist with Racing Louisville FC in the NWSL. I previously worked for the Ohio State Department of Athletics and Human Performance Collaborative in sport and performance science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team. I started this site to track my progress and projects over the next few years and to share what I learn along the way. Go bucks!!!
+Hi!! My name is Emaly Vatne and I am a PhD Candidate (all-but-dissertation) in kinesiology and statistical data analysis at Ohio State. I currently serve as the Applied Sport Scientist with Racing Louisville FC in the NWSL. I previously worked for the Ohio State Department of Athletics and Human Performance Collaborative in sport and performance science. Before all of this, I played 5 seasons on the Ohio State varsity women's soccer team.  
+
+I started this site to track my progress and projects over the next few years and to share what I learn along the way. I hope something I share is helpful for you!!! :)
