@@ -63,11 +63,11 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
         - title: Applied Sport Scientist
-          company: Racing Louisville FC
-          company_url: 'https://www.racingloufc.com/'
+          company: Denver Summit FC
+          company_url: 'https://www.denversummitfc.com/'
           company_logo: ''
-          location: Louisville, KY
-          date_start: '2025-09-15'
+          location: Denver, CO
+          date_start: '2026-01-15'
           date_end: ''
           description: ''
         - title: Assistant Sport Scientist
