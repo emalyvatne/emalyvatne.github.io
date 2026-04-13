@@ -41,13 +41,13 @@ interests:
 education:
   courses:
     - course: PhD in Kinesiology; Graduate Minor in Statistical Data Analysis
-      institution: The Ohio University
+      institution: The Ohio State University
       year: 2026
     - course: MS in Kinesiology, Health and Exercise Science
-      institution: The Ohio University
+      institution: The Ohio State University
       year: 2023
     - course: BS in Exercise Science; Undergraduate Minor in Human Nutrition
-      institution: The Ohio University
+      institution: The Ohio State University
       year: 2021
 
 # Skills
