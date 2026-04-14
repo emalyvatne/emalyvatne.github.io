@@ -1,18 +1,18 @@
 ---
 title: Applying Logistic Regression to Create an Expected Pass Model and Identifying Top Overperformers
 author: 'Emaly Vatne'
-date: '2025-02-15'
+date: '2026-03-15'
 slug: expectedpass
 categories: []
 subtitle: ''
 summary: 'In this post, I show the code for creating an "Expected Pass" model using logistic regression, and then I use it to identify which female footballers outperform the prediction for their passes.'
 authors: []
-lastmod: '2025-02-14T20:57:45-05:00'
+lastmod: '2026-03-14T20:57:45-05:00'
 projects: []
 ---
 
 
-I was watching FC Barcelona Femeni and admiring the decision-making and technical competency of Aitana Bonmati. Obviously, with her recent back-to-back Ballon D'Or wins, I am not the only one recognizing the exceptional level she is playing at. However, watching her made me wonder what influences pass completion in women's soccer. I would assume that the presence of pressure and increasing pass length would make passes less likely to be completed successfully just based on my own playing experience. With free data from Hudl Statsbomb, we can test exactly what influences successful and unsuccessful pass attempts in women's football and evaluate which players overperform the model predition! I would anticipate that Aitana is one of these overperformers, but this is just my bias :)  
+I was watching highlights of FC Barcelona Femeni and admiring the decision-making and technical competency of Aitana Bonmati. Obviously, with her 3 consecutive Ballon D'Or wins, I am not the only one recognizing the exceptional level she plays at. However, watching her made me wonder what influences pass completion in women's soccer. I would assume that the presence of pressure and increasing pass length would make passes less likely to be completed successfully just based on my own playing experience. With free data from Hudl Statsbomb, we can test exactly what influences successful and unsuccessful pass attempts in women's football and evaluate which players overperform the model predition! I would anticipate that Aitana is one of these overperformers, but this is just my bias :)  
 
 The questions I want to answer are 1) how do pass length, pass angle, and pressure affect the pass completion and 2) who are the female soccer players who most outperform the "expected pass" model prediction? Answering this question does more than just (hopefully) confirm my bias that Aitana is one of the best passers in the world. This statistical analysis could also inform individual development plans, recruiting, scouting, and also player evaluations.  
 
