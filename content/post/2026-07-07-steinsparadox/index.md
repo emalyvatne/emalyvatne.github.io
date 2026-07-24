@@ -76,7 +76,7 @@ str(matchids)
 ```
 
 ##### Load Events and Get Corners per Game by Team
-```{r load events}
+```
 events <- allevents(username, password, matches = matchids) %>%
   allclean()
 head(events)
