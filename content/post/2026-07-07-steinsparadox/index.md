@@ -47,7 +47,7 @@ So let's get to it!
 
 First, we need to load the StatsBombR package and we'll also load dplyr and ggplot2 for wrangling and visualization. I will also set my credentials for the StatsBomb data so I get this season's data.
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, include=FALSE}
+```
 library(StatsBombR)
 library(dplyr)
 library(ggplot2)
@@ -59,7 +59,7 @@ The purpose of this analysis is really to be able to forecast how many corners o
 To get started, we need to get the competition ids for the 2025 NWSL season and then the match ids so we can retrieve the event (including corner) data. 
 
 ##### Load Match Ids
-```{r}
+```
 competitions <- StatsBombR::competitions(username, password)
 NWSL_competitions <- competitions %>% 
   dplyr::filter(competition_name == "NWSL")
@@ -82,7 +82,7 @@ events <- allevents(username, password, matches = matchids) %>%
 head(events)
 ```
 
-```{r}
+```
 # get corners
 corners <- events %>% 
   dplyr::select(match_id, team.name, pass.type.name) %>% 
@@ -103,7 +103,7 @@ head(corners)
 
 Next, we will build 2 dataframes: 1 for the first half of the season (train) and 1 for the second half of the season (test).
 
-```{r}
+```
 ### split first and second halves of the 2025 nwsl season
 dat_firsthalf <- corners %>% 
   dplyr::filter(match_date < "2025-06-25")
@@ -121,7 +121,7 @@ dim(dat_secondhalf) # 611 x 29
 ```
 
 Next, I will summarize the data to create a simple dataframe that presents the average number of corners per game in the first and second halves of the season per team.
-```{r}
+```
 pergame_firsthalf <- dat_firsthalf %>%
   ungroup() %>% 
   group_by(team.name) %>%
@@ -145,7 +145,7 @@ pergame_secondhalf <- dat_secondhalf %>%
 
 
 ##### Explore the Data
-```{r}
+```
 par(mfrow = c(1,2))
 hist(pergame_firsthalf$corners_per_game, col = "grey", main = "First Half of the Season")
 rug(pergame_firsthalf$corners_per_game, col = "red", lwd = 2)
@@ -165,7 +165,7 @@ Inspired by Efron & Morris (1977) and Pat Ward's blog, we will deploy 3 approach
 
 I'll quickly merge the first and second half of the season's average corners per game into one dataframe so we can subtract one from the other to obtain the difference in our forecast had we simply assumed the first half of the season's performance (corners_per_game.x) would be similar to the second (corners_per_game.y). Once I have the difference added per team, I'll add columns for the mean absolute error (MAE) and the root mean square error (RMSE), which we will use to compare the other two methods. 
 
-```{r}
+```
 pergame <- merge(pergame_firsthalf, pergame_secondhalf, by = "team.name")
 pergame <- pergame %>% dplyr::select(team.name, corners_per_game.x, corners_per_game.y)
 
@@ -200,7 +200,7 @@ Where:
 
 First we will calculate the mean and SD across all teams and squared differences from the first 30 day sample.
 
-```{r}
+```
 # Calculate grand mean and sd
 group_mean <- round(mean(pergame$corners_per_game.x, na.rm = TRUE), 3)
 group_mean # 4.656
@@ -215,7 +215,7 @@ sq.diff # 15.277
 
 Now we calculate the shrinkage factor, *c*
 
-```{r}
+```
 k <- nrow(pergame)
 c <- 1 - ((k - 3) * group_sd^2) / sq.diff
 c # .1539
@@ -223,7 +223,7 @@ c # .1539
 
 Now we have what we need to make a forecast of the number of corners per game each team will have through the second half of the season using the James-Stein Estimator and calculate the MAE and RMSE
 
-```{r}
+```
 pergame$JS <- group_mean + c*(pergame$corners_per_game.x - group_mean)
 pergame$Proj_Diff_JS <- with(pergame, JS - corners_per_game.y)
 
@@ -237,7 +237,7 @@ Okay so at the end of the Efron & Morris (1977) article, they discuss other appr
 
 In this example, the prior for average corner per game I’m going to use will be the mean and standard deviation across all teams from the first half of the season and the past 3 (2022 - 2024) seasons of data.
 
-```{r}
+```
 #### get previous 3 seasons of data to build the prior
 ## get matchids
 matchids_2024 <- StatsBombR::get.matches(
@@ -300,7 +300,7 @@ corners <- corners %>%
   )
 ```
 
-```{r}
+```
 ## create an updated prior using the first half of 2025 and previous 3 season
 # first half of 2025
 firsthalf2025_avg <- mean(pergame$corners_per_game.x, na.rm = TRUE)
@@ -321,7 +321,7 @@ I'll replicate the approach Pat took to calculate the Bayes estimator:
 
 (Bayes Estimator) BE = prior_cornerspergame_avg + prior_cornerspergame_sd(obs_cornerspergame – prior_cornerspergame_avg)
 
-```{r}
+```
 pergame$BE <- prior_cornerspergame_avg + prior_cornerspergame_sd*(pergame$corners_per_game.x - prior_cornerspergame_avg)
 
 pergame$Proj_Diff_BE <- with(pergame, BE - corners_per_game.y)
@@ -335,7 +335,7 @@ rmse_BE
 
 Now I'll put the MAE and RMSE of the 3 approaches into a data frame so we can see how they performed.
 
-```{r}
+```
 Comparisons <- c("FirstHalf_Avg", "James_Stein", "Bayes")
 mae_grp <- c(mae, mae_JS, mae_BE)
 rmse_grp <- c(rmse, rmse_JS, rmse_BE)
@@ -356,7 +356,7 @@ Dealing with small samples is a problem in sport and what we saw was that if we 
 
 The question, "how many corners per game do we expect to get through the second half of the season" was asked based on the first 11 games of the 2026 NWSL projecting out through the next 19. With that, I will use each of the following approaches, the arithmetic mean, James-Stein estimator, and Bayes Estimator, to forecase corners per game for the second half of the 2026 NWSL season. And in 3 months time, we can come back and see which approach performed the best.
 
-```{r}
+```
 #### get 2026 season data
 ## get matchids
 matchids_2026 <- StatsBombR::get.matches(
@@ -400,7 +400,7 @@ corners <- corners %>%
   )
 ```
 
-```{r}
+```
 ## build forecast table
 secondhalf2026_corners <- corners
 
