@@ -88,6 +88,8 @@ The total xG again = 2.3
 
 The expected value is 2.3, but the probability of scoring exactly 2 goals might only be around 27%, with substantial probabilities for 1, 3, or even 0 and 4 goals depending on the uncertainty around the likelihood of converting shots into goals. Therefore, saying "They should have scored 2-3 goals from an xG of 2.3" is a naive conclusion to draw from xG. Again, it's entirely possible that this expected value is close to what is observed. In fact, this is probably what has led to xG so often being misinterpreted as the most likely outcome instead of the expected value. 
 
+In other words, five shots each with an xG value of 0.20 are not equivalent to a single shot with an xG value of 1.00.
+
 Here is another example:  
 
 Consider two teams playing in a single match.  
@@ -120,7 +122,7 @@ And in this example, it is most likely that the team scores only one goal from t
 
 ### Future directions 
 
-I believe that xG developed its misinterpretation from often being close to the observed outcome in other (namely men's) leagues. This and other hypotheses will be addressed in subsequent posts. Specifically, I will lean on other, similar work such as Lago-Peñas (2026) to identify the most probable number of goals scored for teams, evaluate how that compares to xG in the NWSL vs MLS, and then reconstruct the league tables based on the most likely number of goals scored (and therefore match outcome).
+I believe that xG developed its misinterpretation from often being close to the observed outcome in other (namely men's) leagues. This and other hypotheses will be addressed in subsequent posts. Specifically, I will lean on other, similar work such as Lago-Peñas (2026) to identify the most probable number of goals scored for teams, evaluate how that compares to xG in the NWSL vs MLS, and then reconstruct the league tables based on the most likely number of goals scored (and therefore match outcome) because the probability distribution of total goals cannot be accurately captured by a simple linear sum such as total xG.
 
 ### References 
 
