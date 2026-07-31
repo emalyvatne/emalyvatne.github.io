@@ -37,16 +37,16 @@ For example:
 
 Each shot can be modeled as a *Bernoulli random variable*, which is a discrete random variable with two possible outcomes: 1 (success) and 0 (failure) and can be modeled as:
 
-$$Y_{i} \sim \text{Bernoulli}(p_{i})$$
+Y_i ~ Bernoulli(p_i)
 
 where:
 
-- $Y_{i} = 1$ if the shot is scored, $Y_{i} = 0$ otherwise
-- $p_{i} = \text{xG}_{i}$
+Y_i = 1 if the shot is scored, Y_i = 0 otherwise
+p_i = xG_i
 
 The expected value of that shot is its success (aka scoring) probability:
 
-$$E[Y_{i}] = p_{i}$$
+E[Y_i] = p_i
 
 #### **The issue**
 
