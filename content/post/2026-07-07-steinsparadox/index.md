@@ -7,7 +7,7 @@ categories: []
 subtitle: ''
 summary: 'This post is about Steins Paradox in statistics and estimators of future performance.'
 authors: []
-lastmod: '2025-07-07T20:57:45-05:00'
+lastmod: '2026-07-07T20:57:45-05:00'
 projects: []
 ---
 

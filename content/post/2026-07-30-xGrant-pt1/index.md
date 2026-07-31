@@ -7,7 +7,7 @@ categories: []
 subtitle: 'How I Think We Are Misinterpreting xG: Part 1'
 summary: ''
 authors: []
-lastmod: '2025-07-31T20:57:45-05:00'
+lastmod: '2026-07-31T20:57:45-05:00'
 projects: []
 ---
 
