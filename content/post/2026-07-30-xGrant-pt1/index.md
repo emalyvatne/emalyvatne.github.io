@@ -1,10 +1,10 @@
 ---
-title: The Expected Value is Not Always the Most Likely or Most Probable Outcome
+title: 'The Expected Value is Not Always the Most Likely or Most Probable Outcome'
 author: 'Emaly Vatne'
 date: '2026-07-31'
 slug: xGRantPtOne
 categories: []
-subtitle: 'How I Think We're Misinterpreting xG: Part 1'
+subtitle: 'How I Think We Are Misinterpreting xG: Part 1'
 summary: ''
 authors: []
 lastmod: '2025-07-31T20:57:45-05:00'
