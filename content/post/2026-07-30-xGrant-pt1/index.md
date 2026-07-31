@@ -13,7 +13,7 @@ projects: []
 
 ### Purpose 
 
-Expected goals (xG) is now one of football's most commonly used metrics, but I thiink its widespread adoption has diluted its original meaning and purpose. I've actually been thinking a lot about how xG is discussed and interpreted, but a couple of recent conversations have prompted me to organize my thoughts. Therefore, the purpose of this post (which will almost certainly become a series) is to revisit the original definition of xG and statistically how it has become slightly corrupted. 
+Expected goals (xG) is now one of football's most commonly used metrics, but I think its widespread adoption has diluted its original meaning and purpose. I've actually been thinking a lot about how xG is discussed and interpreted, but a couple of recent conversations have prompted me to organize my thoughts. Therefore, the purpose of this post (which will almost certainly become a series) is to revisit the original definition of xG and statistically how it has become slightly corrupted. 
 
 ### Brief background 
 
@@ -37,16 +37,16 @@ For example:
 
 Each shot can be modeled as a *Bernoulli random variable*, which is a discrete random variable with two possible outcomes: 1 (success) and 0 (failure) and can be modeled as:
 
-$$Y_i \sim \text{Bernoulli}(p_i)$$
+$$Y_{i} \sim \text{Bernoulli}(p_{i})$$
 
 where:
 
-- $Y_i = 1$ if the shot is scored, $Y_i = 0$ otherwise
-- $p_i = \text{xG}_i$
+- $Y_{i} = 1$ if the shot is scored, $Y_{i} = 0$ otherwise
+- $p_{i} = \text{xG}_{i}$
 
 The expected value of that shot is its success (aka scoring) probability:
 
-$$E[Y_i] = p_i$$
+$$E[Y_{i}] = p_{i}$$
 
 #### **The issue**
 
