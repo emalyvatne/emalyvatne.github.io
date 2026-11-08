@@ -13,8 +13,8 @@ authors:
 - jones-p
 - hagen-j
 author_notes: ''
-date: '2026-12-31T00:00:00Z'
-publishDate: '2026-12-31T00:00:00Z'
+date: '2026-01-01T00:00:00Z'
+publishDate: '2026-01-01T00:00:00Z'
 publication_types:
 - article-journal
 publication: International Journal of Sports Science & Coaching
