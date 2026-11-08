@@ -1,13 +1,13 @@
 ---
 title: Micronutrient intake and predictors of adequacy in female collegiate dancers consuming low-energy diets
 authors:
-- Brooks S.
-- Frost A.
-- Sanders D. J.
+- brooks-s
+- frost-a
+- sanders-d-j
 - admin
-- Calamoneri T.
-- Stroh E.
-- Saenz C.
+- calamoneri-t
+- stroh-e
+- saenz-c
 author_notes: ''
 date: '2026-12-31T00:00:00Z'
 publishDate: '2026-12-31T00:00:00Z'

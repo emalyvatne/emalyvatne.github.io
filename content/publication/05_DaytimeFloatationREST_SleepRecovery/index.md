@@ -2,11 +2,11 @@
 title: 'Effects of Daytime Floatation-REST on Nocturnal Cardiovascular Physiology, Sleep, and Subjective Recovery in Collegiate Student-Athletes: A Comprehensive Observational Study'
 authors:
 - admin
-- Merrigan J. J.
-- Stone J. D.
-- Saenz C.
-- Kraemer W. J.
-- Hagen J. A.
+- merrigan-j-j
+- stone-j-d
+- saenz-c
+- kraemer-w-j
+- hagen-j-a
 author_notes: ''
 date: '2025-12-31T00:00:00Z'
 publishDate: '2025-12-31T00:00:00Z'

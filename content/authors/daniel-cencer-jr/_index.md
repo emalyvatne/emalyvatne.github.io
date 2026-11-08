@@ -1,0 +1,4 @@
+---
+title: Daniel Cencer Jr.
+...
+---

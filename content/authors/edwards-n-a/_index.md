@@ -1,0 +1,4 @@
+---
+title: Edwards N. A.
+...
+---

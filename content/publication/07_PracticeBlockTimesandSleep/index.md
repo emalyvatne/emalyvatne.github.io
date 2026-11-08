@@ -2,16 +2,16 @@
 title: The Impact of Team Practice Block Start Times on Sleep Characteristics in Collegiate Athletes
 authors:
 - admin
-- Vatne M.
-- Cencer D.
-- Saenz C.
-- Kraemer W. J.
-- Robinson B.
-- Jones P.
-- Stone J.
-- Merrigan J.
-- Carpenter T.
-- Hagen J.
+- vatne-m
+- cencer-d
+- saenz-c
+- kraemer-w-j
+- robinson-b
+- jones-p
+- stone-j
+- merrigan-j
+- carpenter-t
+- hagen-j
 author_notes: ''
 date: '2025-12-31T00:00:00Z'
 publishDate: '2025-12-31T00:00:00Z'

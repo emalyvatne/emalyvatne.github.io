@@ -1,17 +1,17 @@
 ---
 title: 'Neuromuscular Profiles of Female Collegiate Athletes: Variations in Countermovement Jump Metrics Across 8 NCAA Division I Sports'
 authors:
-- "William J. Kraemer"
+- william-j-kraemer
 - admin
-- "Catherine Saenz"
-- "Paul Jones"
-- "Tyler Carpenter"
-- "Daniel Cencer Jr."
-- "Kevin Enchelmeyer"
-- "Kyle Pulvermacher"
-- "Clare Quebedeaux"
-- "Matthew Vatne"
-- "Joshua Hagen"
+- catherine-saenz
+- paul-jones
+- tyler-carpenter
+- daniel-cencer-jr
+- kevin-enchelmeyer
+- kyle-pulvermacher
+- clare-quebedeaux
+- matthew-vatne
+- joshua-hagen
 author_notes: ''
 date: '2025-12-31T00:00:00Z'
 publishDate: '2025-12-31T00:00:00Z'

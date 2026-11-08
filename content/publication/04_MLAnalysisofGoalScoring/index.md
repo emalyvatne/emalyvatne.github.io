@@ -1,13 +1,13 @@
 ---
 title: 'Perfect shot reveal: Machine learning analysis of goal-scoring strategies in soccer'
 authors:
-- Yazbeck M.
-- Abdullah M.
-- Alhanouti S.
+- yazbeck-m
+- abdullah-m
+- alhanouti-s
 - admin
-- Hagen J.
-- Allen T. T.
-- Krening S.
+- hagen-j
+- allen-t-t
+- krening-s
 author_notes: ''
 date: '2025-12-31T00:00:00Z'
 publishDate: '2025-12-31T00:00:00Z'

@@ -2,19 +2,19 @@
 title: Establishing Comprehensive Normative Values of Objective Sleep Quantity and Quality in Collegiate Athletes
 authors:
 - admin
-- Vatne M.
-- Cencer D.
-- Kraemer W. J.
-- Saenz C.
-- Stone J.
-- Merrigan J.
-- Pulvermacher K.
-- Robinson B.
-- Dial M.
-- Jones P.
-- Montalbano A.
-- Carpenter T.
-- Hagen J.
+- vatne-m
+- cencer-d
+- kraemer-w-j
+- saenz-c
+- stone-j
+- merrigan-j
+- pulvermacher-k
+- robinson-b
+- dial-m
+- jones-p
+- montalbano-a
+- carpenter-t
+- hagen-j
 author_notes: ''
 date: '2025-12-31T00:00:00Z'
 publishDate: '2025-12-31T00:00:00Z'
